@@ -1,4 +1,4 @@
-# Welcome to Reflex - Interactive Dashboard!
+# Reflex - Interactive Dashboard!
 
 Powered by [reflex.dev](https://reflex.dev/)
 
@@ -31,9 +31,11 @@ The following is a dashboard to interactively display data some data. It is a go
    sudo apt update && sudo apt upgrade -y
    ## Install the virtualenv tool and unzip
    sudo apt install python3.12-venv unzip
-   ## Install the `bun` module for later use (Linux and macOS)
+   
+   ## Install the `bun` package manager for later use with Reflex
+   ## If you have Node.js v20+ installed, this is not neccessary!
    curl -fsSL https://bun.sh/install | bash
-   ## activate the .bashrc to make sure bun is accessible
+   ## activate the .bashrc to make sure `bun` is accessible
    source ~/.bashrc
    ```
 
@@ -90,21 +92,14 @@ The following is a dashboard to interactively display data some data. It is a go
 
    ```shell
    reflex run
-   ## In macOS, It may complain no permission to run/install ...bun_install.sh 
    ```
-
-   Please install `bun` package (`curl -fsSL https://bun.sh/install | bash`) if you confront a warning like:
-
-   > Warning: There was an error running command: ['/home/zenusr/.local/share/reflex/bun/bin/bun', 'install'].
-   >
-   > Warning: There was an error running command: ['/home/zenusr/.local/share/reflex/bun/bin/bun', 'add',...
-
+   
    Eventually, you will be presented with:
-
+   
    > App running at: http://localhost:3000 
    >
    > Backend running at: http://0.0.0.0:8000
-
+   
 7. Enjoy the show.
 
 
@@ -142,11 +137,11 @@ class Item:
    ## Add data files in
    git add .
    ## Commit
-   git commit -m "nba-data"
+   git commit -m "dashboard"
    ## channel it to master - sorry not a fan of main
    git branch -M master
    ## conenct to remote repo
-   git remote add origin https://github.com/marcuszou/nba-data-dash.git
+   git remote add origin https://github.com/marcuszou/reflex-dashboard.git
    ## Push the project files
    git push -u origin master
    ```
